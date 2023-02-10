@@ -1,0 +1,865 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  --primary: #1aac83;
+  --error: #e7195a; 
+  --success: green;
+}
+body {
+  background: #f1f1f1;
+  margin: 0;
+  font-family: "Poppins";
+}
+header {
+  background: #fff;
+}
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header a {
+  color: #333;
+  text-decoration: none;
+}
+.pages{
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto; 
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+#deleteButton { /* material icon */
+  font-size: 30px; 
+  stroke-width: 22;
+}
+
+/* search bar */ 
+.search-input {
+  background-color: white;
+  width: 80%;
+  height: 40px;
+  margin-top: 0%;   
+  font-size: 15px;
+  border: 0px;
+  outline: 0; 
+  width: 100%; 
+  padding: 0 1.6rem; 
+  appearance: none; 
+  transition: all .7rem .7rem;
+  transition-property: width, border-radius;
+  z-index: 1;
+  position: relative;
+} 
+
+.search-input:not(:placeholder-shown) {
+  border-radius: .7rem .7rem .7rem .7rem; 
+}
+
+.search-input:focus {
+  outline: none; 
+} 
+
+/* homepage */
+.home, .createproject {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 100px; 
+}
+.user-details {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.user-details h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+.user-details p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.user-details span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+
+/* user profile page */ 
+
+.user-profile, .assignment-profile { /* div on the right*/
+  background: #fff;
+  border-radius: 4px; 
+  margin-right: 5%; 
+  margin-top: 3%;
+  margin-left: 0%;
+  padding: 20px;  
+  text-align: auto; 
+  float: right;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  height: max-content;
+  width: 58%;  
+}
+
+.cancelBtn, .editContactBtn, .editSkillsBtn, .editRoleBtn {
+  /* background: var(--primary); */
+  background: rgba(128, 128, 128, 0.268);
+  border: 0;
+  color: rgb(86, 86, 86);
+  padding: 10px; 
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer; 
+}
+
+.user-profile h2, h4, p, hr{
+  margin: 30px;
+}
+
+hr { 
+  border-top: 1px solid rgb(213, 212, 212);  
+}
+
+.profile-panel, .selection-panel {
+  background: #fff;
+  border-radius: 4px;  
+  margin-top: 3%; 
+  margin-left: 5%;
+  padding: 30px;  
+  align-items: center;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  height: max-content;
+  width: 200px;  
+  grid-template-rows: auto;
+  float: left;
+  align-self: left; 
+} 
+
+.profile-panel button { 
+  margin: 12px;
+  align-items: center;
+  border: none;
+  background: none;
+  background: none;
+  font: inherit;
+}
+
+.profile-panel button:focus { 
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 4px; 
+}
+
+.newContactForm {
+  margin-top: 30px;
+  margin-left: 30px;
+  margin-right: 30px; 
+  width: 740px;  
+}
+
+.editSkillsForm {
+  margin-top: 30px; 
+  margin-right: 30px;  
+}
+
+.editSkillsForm button, h3 {
+  margin-left: 30px;
+}
+
+.changePwdForm {   
+  margin-left: 30px;
+  margin-right: 30px;
+  max-width: 800px;
+  width: 90%;;   
+  height: max-content;
+  box-sizing: border-box;
+} 
+
+.newContactForm input {
+  height: 50px;
+}
+
+input::placeholder {
+  font-family: "Poppins";
+}
+
+.editContactBtn {
+  display: inline; 
+  vertical-align: middle;  
+  margin-right: 30px;
+}
+
+.submitBtn {
+  background: var(--primary); 
+  float: right;
+  margin-left: 10px;
+}
+
+.cancelBtn { 
+  float: right; 
+}
+ 
+.editSkillsBtn {
+  float: right;
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.skillSelection {
+  margin-left: 30px;
+  height: 30px;
+  width: 120px;
+  border-radius: 4px;
+  border-color: #555;
+
+}
+
+/* All Users Page */ 
+.selection-panel button {
+  margin: 6%; 
+  align-items: center;
+  border: none;
+  background: none;
+  background: none;
+  font: inherit;
+}
+
+.selection-panel button:focus { 
+  color: var(--primary);
+  font-weight: bold;
+  border-radius: 4px; 
+}
+
+.all-users {  
+  display: grid;
+  margin-right: 5%; 
+  margin-top: 3%;
+  margin-left: 0%;   
+  width: 58%;  
+  height: max-content; 
+  float: right; 
+}
+
+.all-users select { 
+  height: 40px;
+  width: max-content;
+  border-radius: 4px;
+  border-color: rgba(168, 168, 168, 0.169);
+}
+
+.all-users h4 {
+  margin-left: 0px;
+}
+
+.all-users table {
+  width: 100%;
+  /* border: 1px solid white; */
+  border-radius: 4px;
+}
+
+.all-users table, tr {
+  border-bottom: 1px solid rgba(140, 135, 135, 0.169);
+  background-color: white;
+}
+
+.all-users td {
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0px;
+}
+
+.all-users h3 {
+  margin-top: 10px;
+}
+
+.user-div { 
+  background-color: white;
+  border-radius: 4px;
+  width: 100%;  
+}
+
+.user-div h3 { 
+  padding-top: 20px;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.user-div p {
+  padding-left: 20px; 
+  margin: 10px;
+  font-size: 0.9em; 
+}
+
+.user-cell {
+  background-color: white; 
+  width: 100%;  
+  height: 120px; 
+  align-items: center;
+}
+
+.user-cell h3 { 
+  padding-top: 5px;
+  font-size: 1.2em;
+  color: var(--primary);
+}
+
+.user-cell p {
+  padding-left: 20px; 
+  margin: 10px;
+  font-size: 0.9em; 
+}
+
+.checkBox {
+  float: left;
+  margin: 5px 0px;
+}
+
+.deleteUsersBtn {
+  float: right;
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* user details page */
+.user-Details-detailsDiv {
+  background: #fff;
+  border-radius: 4px;  
+  margin-left: 0px;  
+  margin-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  height: max-content;
+  width: 50%;  
+  float: right;
+}
+
+.user-Details-detailsDiv select { 
+  height: 40px;
+  width: max-content;
+}
+
+.user-Details-detailsDiv form {
+  margin-left: 30px;
+  width: 70%;
+}
+
+.user-Details-detailsDiv .editRoleBtn {
+  margin-left: 30px;
+}
+
+.user-Details-detailsDiv  .submitBtn {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.user-Details-detailsDiv form button {
+  display: inline-block; 
+}
+
+.userDetails-tableDiv {
+  width: 100%;
+  height: 300px; 
+  display: table;
+  border-spacing: 10px;
+}
+
+.cell-display {
+  display: table-cell;
+}
+
+.userDetails-orgDiv {
+  background: #fff; 
+  border-radius: 4px;  
+  margin-top: 3%;  
+  margin-right: 18px;
+  margin-top: 10px;
+  width: 40%;   
+  height: 300px;
+  box-sizing: border-box;
+  /* float: left; */
+  display: table-cell;
+}
+
+.userDetails-skillsDiv {
+  background: #fff;
+  margin-left: 3%;
+  border-radius: 4px;  
+  margin-top: 3%; 
+  margin-left: 18px; 
+  width: 60%;   
+  height: 300px;
+  box-sizing: border-box;
+  /* float: right; */
+  display: table-cell;
+}
+
+.userDetails-projectsDiv {
+  background: #fff; 
+  border-radius: 4px;   
+  margin-left: 10px;
+  width: 97%;
+  height: max-content;
+  float: left;
+  display: table-cell;
+}
+
+/* Organisation SKills Page */
+.allSkills-div {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  grid-column-gap: 5px; /* space between columns, change as needed */
+  grid-row-gap: 5px; /* space between rows, change as needed */ 
+  align-content: start;
+}
+
+.skill-div { 
+  display: block;
+  height: fit-content;
+  width: fit-content;
+  background-color: #fff;
+  margin: 2%;
+  border-radius: 4px;
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.skill-div span {
+  font-size: 15px;
+  padding: 5px;
+}
+
+.skill-div material-symbols-outlined {
+  float: right;
+  padding-left: 10px;
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+}
+
+.addOrgSkillsForm {
+  padding-left: 10px;
+  margin-left: 10px; 
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 90%; 
+}
+
+.addOrgSkillsForm input {
+  width: 70%;
+  height: 40px;
+  display: inline-block;
+}
+
+.addOrgSkillsForm button { 
+  display: inline-block;
+}
+
+/* Organisation Details Page */
+.organisation-details {
+  background: #fff;
+  border-radius: 4px;  
+  margin-left: 5%; 
+  margin-right: 5%; 
+  margin-top: 10px; 
+  padding: 30px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  height: max-content;
+  width: 86%;   
+}
+
+.organisation-details button {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  height: 40px;
+  font-family: "Poppins";
+}
+
+.organisation-details .signUpBtn {
+  margin-top: 30px;
+}
+
+
+/* new project form */
+/* CreateProject page */
+.create h2 {
+    text-align: center;
+    font-size: 20px;
+    /* color: var(--primary); */
+    margin-bottom: 30px;
+}
+.create {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.create label {
+    display: block;
+}
+.create input, .create textarea, .create select {
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    display: block;
+}
+.create div {
+    display: flex;
+}
+.create div select {
+    width: 45%;
+    margin-right: 80px;
+}
+.create div span {
+    cursor: pointer;
+    background: #f1f1f1;
+    padding-top: 17px;
+    padding-right: 1px;
+    align-items: center;
+    color: #333;
+}
+.create textarea {
+    overflow-y: hidden;
+    resize: none;
+    height: 400px;
+    font-family: "Poppins";
+}
+button.error {
+    border: 2px solid red;
+}
+label, input {
+  display: block;
+}
+input, .adminLoginForm, .superAdminLoginForm {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+form button, .updateDetailsBtn{
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
+}
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+input.error, .create textarea.error {
+  border: 1px solid var(--error);
+}
+
+div.success {
+  padding: 10px;
+  background: #e9f5f5;
+  border: 1px solid var(--success);
+  color: var(--success);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+/* navbar */
+nav {
+  display: flex;
+  align-items: center;
+}
+nav a, nav button {
+  margin-left: 10px;
+}
+nav button {
+  background: #fff;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+}
+nav a:hover {
+    color: var(--primary);
+}
+
+/* auth forms */
+form.signup, form.login, form.adminLoginForm, form.superAdminLoginForm, form.resetPasswordForm{
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  border-color: #fff;
+  height: max-content;
+}
+.login h3, .signup h3 {
+    margin-left: 0px;
+}
+.showPwBtn {
+  height: 40px;  
+  top: 46.6%;
+  right: 36.1%;  
+  color: rgb(37, 36, 36); 
+  background-color: rgba(206, 202, 202, 0.517); 
+  font-size: x-small;
+  border-color: transparent;
+  margin: 0; 
+}
+
+/* signup page */
+.signup select {
+  width: max-content;
+  height: 35px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+}
+
+/* forgot password form */
+.resetPasswordForm h2 {
+  text-align: center; 
+}
+.resetPasswordForm span {
+  font-size: 0.9em;
+  color: #555;  
+}
+
+/* project listing page */
+.project-list {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.project-list h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+  color: var(--primary);
+
+}
+.project-list p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+.project-list span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  background: #f1f1f1;
+  padding: 6px;
+  border-radius: 50%;
+  color: #333;
+}
+.project-list:hover {
+    box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+}
+.project-list a {
+    text-decoration: none;
+}
+
+/* project details page */
+.project-details {
+    position: relative;
+    white-space: pre-wrap;
+}
+.project-details h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.project-details article p {
+    font-size: 15px;
+    margin: 20px 0;
+}
+.project-details div p {
+    font-size: 20px;
+    margin: 20px 0;
+}
+.project-details button {
+    background: var(--primary);
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.project-details a {
+    cursor: pointer;
+    text-decoration: none;
+    background: #f1f1f1;
+    right: 0;
+    padding: 10px;
+    top: 1.5%;
+    position: absolute;
+    color: #333;
+}
+
+/* SelectPreference page */
+select.error {
+    border: 1px solid var(--error);
+}
+
+/* Assignment */
+.assignment-home {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 100px;
+}
+.assignment-details {
+    background: #fff;
+    border-radius: 4px;
+    margin: 20px auto;
+    padding: 20px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+}
+.assignment-details h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+    color: var(--primary);
+}
+.assignment-details p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+}
+.assignment-details span {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    background: #f1f1f1;
+    padding: 6px;
+    border-radius: 50%;
+    color: #333;
+}
+
+.editEmployeesBtn {
+    background: var(--primary);
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 30px;
+    font: inherit;
+    font-size: small;
+}
+
+.assignment-profile h3, .assignment-profile h2, .employeeSelection, .projectSelection, .submitBtn{
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.employeeSelection {
+  height: 40px;
+  width: max-content;
+  border-radius: 4px;
+  border-color: rgba(168, 168, 168, 0.169);
+  background-color: rgba(223, 223, 223, 0.228);
+}
+
+.editProjectsBtn, .setActiveStatusBtn {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 30px;
+  font: inherit;
+  font-size: small;
+}
+
+.automaticAssignmentBtn {
+  background: var(--primary);
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 10px;
+  font: inherit;
+  font-size: small;
+  float: right;
+}
+
+
+.projectSelection {
+  height: 40px;
+  width: max-content;
+  border-radius: 4px;
+  border-color: rgba(168, 168, 168, 0.169);
+  background-color: rgba(223, 223, 223, 0.228);
+}
+
+.showStatistics {
+  width: 100%; 
+  height: 600px; 
+  overflow: hidden; 
+}
+
+.showStatistics .react-chartjs-2 {
+  width: 100%; 
+  height: 100%; 
+}
+
+/* Employee's assigned projects page */
+.project-div {
+  background: #fff;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0,0.05);
+}
+
+h2 {
+  display: inline-block;
+}
