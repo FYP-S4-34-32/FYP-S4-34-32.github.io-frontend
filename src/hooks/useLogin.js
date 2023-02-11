@@ -23,6 +23,7 @@ export const useLogin = () => {
             body: JSON.stringify({email, password}) // sends {email, password} as the request body
         })
 
+        console.log("in login")
         const json = await response.json() // the return value we get back from the userController.js login function
         console.log(json)
 
