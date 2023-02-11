@@ -21,10 +21,9 @@ export const useLogin = () => {
             method: 'POST',
             headers: {'Content-Type': 'application/json'}, // type of the data
             body: JSON.stringify({email, password}) // sends {email, password} as the request body
-        })
+        }).then(r => console.log(r))
 
-        const json = await response.json().then(r => console.log(r)) // the return value we get back from the userController.js login function
-        console.log(json)
+        const json = await response.json() // the return value we get back from the userController.js login function
 
         // if there is a problem
         if (!response.ok) {
