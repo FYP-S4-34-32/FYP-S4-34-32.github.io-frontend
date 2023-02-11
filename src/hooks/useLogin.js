@@ -24,6 +24,7 @@ export const useLogin = () => {
         })
 
         const json = await response.json() // the return value we get back from the userController.js login function
+        console.log(json)
 
         // if there is a problem
         if (!response.ok) {
