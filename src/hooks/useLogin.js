@@ -16,6 +16,8 @@ export const useLogin = () => {
         setIsLoading(true) // set loading state
         setError(null) // reset error to null in case there was one previously
 
+        console.log(JSON.stringify({email, password}))
+
         // fetch function calls the endpoint in the backend server
         const response = await fetch('/api/user/login', {
             method: 'POST',
