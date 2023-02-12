@@ -346,24 +346,27 @@ const Profile = () => {
 
             case 'changePassword':
                 return (
-                    <div className="user-profile" style={{height:"450px"}}>
-                        <h2> Change Password </h2>
-                        <form className="changePwdForm" onSubmit={handleSubmitPassword}>
+                    <div className="user-profile">
+                    <h2> Change Password </h2>
+                    <form className="changePwdForm" onSubmit={handleSubmitPassword}>
+                        <label> Current Password </label>
+                        <input type="password" onChange={(e) => {setCurrentPassword(e.target.value)}}/>
+                        <label> New Password </label>
+                        <input type="password" onChange={(e) => {setNewPassword(e.target.value)}}/>
+                        <label> Confirm New Password </label>
+                        <input type="password" onChange={(e) => {setConfirmPassword(e.target.value)}}/>
+                                
+                        <button className="cancelBtn" style={{float:"left"}} onClick={() => setSelectedInfo('showUser')}>Cancel</button> 
+                        <button className="submitBtn" disabled={ changePwIsLoading }> Submit </button>
+                        <br></br><br></br>
 
-                            <label> Current Password </label>
-                            <input type="currentPassword" onChange={(e) => {setCurrentPassword(e.target.value)}}/>
-                            <label> New Password </label>
-                            <input type="newPassword" onChange={(e) => {setNewPassword(e.target.value)}}/>
-                            <label> Confirm New Password </label>
-                            <input type="confirmPassword" onChange={(e) => {setConfirmPassword(e.target.value)}}/>
-                            
-                            <button className="cancelBtn" style={{float:"left"}} onClick={() => setSelectedInfo('showUser')}>Cancel</button> 
-
-                            <button className="submitBtn" disabled={ changePwIsLoading }> Submit </button>
-                        </form>
-                        {changePwError && <div className="error"> {changePwError} </div>}
-                        {changePwSuccess && <div className="success"> {changePwSuccess} </div>}
+                    <div className="bottomDiv" style={{ paddingTop: "20px" }}>
+                        {changePwError && <div className="error"> {changePwError}</div>}
+                        {changePwSuccess && <div className="success"> {changePwSuccess}</div>}
                     </div>
+                    </form>
+                    </div>
+
                 )
              
             // DEFAULT: DISPLAY USER INFORMATION

@@ -51,6 +51,7 @@ const ForgotPassword = () => {
                 <div>
                     <form className="resetPasswordForm" onSubmit={(e) => handleSubmit(e)}>
                         <h2>Forgot Password</h2>
+                        <br></br>
                         <span>Enter your email address to reset your password.</span>
                         <br/>
                         <br/>
