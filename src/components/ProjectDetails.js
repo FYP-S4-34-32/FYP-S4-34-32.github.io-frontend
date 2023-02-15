@@ -21,7 +21,7 @@ const ProjectDetails = () => {
     // fires when the component is rendered
     useEffect(() => {
         const fetchProject = async () => {
-            const response = await fetch('/api/project/' + id, { // fetch the project based on the project's id
+            const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project/' + id, { // fetch the project based on the project's id
                 headers: {
                     'Authorization': `Bearer ${ user.token }` // sends authorisation header with the user's token -> backend will validate token -> if valid, grant access to API
                 }
@@ -57,7 +57,7 @@ const ProjectDetails = () => {
 
     // delete project
     const handleClick = async () => {
-        const response = await fetch('/api/project/' + id, {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project/' + id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${ user.token }`
@@ -79,7 +79,7 @@ const ProjectDetails = () => {
 
     // close project
     const handleCloseProject = async () => {
-        const response = await fetch('/api/assignment/closeProject/' + id, {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/assignment/closeProject/' + id, {
             method: 'PATCH',
             headers: {
                 'Authorization': `Bearer ${ user.token }`

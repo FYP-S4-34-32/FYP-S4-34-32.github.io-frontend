@@ -16,7 +16,7 @@ const Projects = () => {
     // fires when component is rendered
     useEffect(() => {
         const fetchProjects = async () => {
-            const response = await fetch('/api/project', {
+            const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project', {
                 headers: {
                     'Authorization': `Bearer ${ user.token }` // sends authorisation header with the uer's token -> backend will validate token -> if valid, grant access to API
                 }

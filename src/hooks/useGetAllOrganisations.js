@@ -14,7 +14,7 @@ export const useGetAllOrganisations = () => {
         setIsLoading(true)  
         setError(null) 
 
-        const response = await fetch('/api/organisation/', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/organisation/', {
             method: 'GET',
             headers: {'Content-Type': 'application/json',
                       'Authorization': `Bearer ${ user.token}`  // sends authorisation header with the uer's token -> backend will validate token -> if valid, grant access to API

@@ -13,7 +13,7 @@ export const useUpdateOrgSkill = () => {
 
         console.log("new skill to be added: ", organisation_skills);
 
-        const response = await fetch('/api/Organisation/updateOrganisationSkils', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/Organisation/updateOrganisationSkils', {
             method: 'POST',
             headers: {'Content-Type': 'application/json',
                       'Authorization': `Bearer ${user.token}`

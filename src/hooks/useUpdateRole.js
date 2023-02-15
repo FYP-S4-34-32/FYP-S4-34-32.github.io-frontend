@@ -15,7 +15,7 @@ export const useUpdateRole = () => {
         setIsLoading(true)  
         setError(null) 
 
-        const response = await fetch('/api/user/updateRole', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/user/updateRole', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email, role})

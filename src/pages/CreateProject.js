@@ -38,7 +38,7 @@ const CreateProject = () => {
     // // fires when component is rendered
     // useEffect(() => {
     //     const fetchSkills = async () => {
-    //         const response = await fetch('/api/skill/', {
+    //         const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/skill/', {
     //             headers: {
     //                 'Authorization': `Bearer ${ user.token }` // sends authorisation header with the uer's token -> backend will validate token -> if valid, grant access to API
     //             }
@@ -72,7 +72,7 @@ const CreateProject = () => {
         const project = { title, description, requirements, projectSkills, projectCompetency, threshold }
 
         // fetch request to post new data
-        const response = await fetch('/api/project/createproject', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project/createproject', {
             method: 'POST',
             body: JSON.stringify(project),
             headers: {

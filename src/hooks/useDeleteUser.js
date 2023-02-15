@@ -17,7 +17,7 @@ export const useDeleteUser = () => {
         setError(null) 
 
 
-        const response = await fetch('/api/user/deleteUser', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/user/deleteUser', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email})

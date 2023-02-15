@@ -14,7 +14,7 @@ export const useUpdateEmployees = () => {
         setIsLoading(true)  
         setError(null) 
 
-        const response = await fetch('/api/assignment/updateEmployees/' + id, {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/assignment/updateEmployees/' + id, {
             method: 'PATCH',
             headers: {'Content-Type': 'application/json',
             'Authorization': `Bearer ${ user.token}`},

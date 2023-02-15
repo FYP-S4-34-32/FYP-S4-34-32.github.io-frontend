@@ -15,7 +15,7 @@ export const useValidateEmail = () => {
         setIsValidationLoading(true)
         setInvalidEmailError(null)  
 
-        const response = await fetch('/api/user/validateEmail', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/user/validateEmail', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email})

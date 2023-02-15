@@ -36,7 +36,7 @@ const CreateOrganisation = () => {
         const organisation = { orgname, organisation_id, detail }
 
         // fetch request to post new data
-        const response = await fetch('/api/organisation/createorganisation', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/organisation/createorganisation', {
             method: 'POST',
             body: JSON.stringify(organisation),
             headers: {

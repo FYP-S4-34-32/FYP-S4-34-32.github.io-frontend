@@ -40,7 +40,7 @@ const EditProject = () => {
     // fetch project details
     useEffect(() => {
         const fetchProject = async () => {
-            const response = await fetch('/api/project/' + id, { // fetch the project based on the project's id
+            const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project/' + id, { // fetch the project based on the project's id
                 headers: {
                     'Authorization': `Bearer ${ user.token }` // sends authorisation header with the user's token -> backend will validate token -> if valid, grant access to API
                 }
@@ -71,7 +71,7 @@ const EditProject = () => {
         }
 
         // const fetchSkills = async () => {
-        //     const response = await fetch('/api/skill/', {
+        //     const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/skill/', {
         //         headers: {
         //             'Authorization': `Bearer ${ user.token }` // sends authorisation header with the uer's token -> backend will validate token -> if valid, grant access to API
         //         }
@@ -177,7 +177,7 @@ const EditProject = () => {
             threshold }
 
         // update data
-        const response = await fetch('/api/project/editproject/' + id, {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project/editproject/' + id, {
             method: 'PATCH',
             body: JSON.stringify(project),
             headers: {

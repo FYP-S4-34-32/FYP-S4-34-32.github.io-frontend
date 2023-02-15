@@ -17,7 +17,7 @@ export const useLogin = () => {
         setError(null) // reset error to null in case there was one previously
 
         // fetch function calls the endpoint in the backend server
-        const response = await fetch('/api/user/login', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/user/login', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'}, // type of the data
             body: JSON.stringify({email, password}) // sends {email, password} as the request body

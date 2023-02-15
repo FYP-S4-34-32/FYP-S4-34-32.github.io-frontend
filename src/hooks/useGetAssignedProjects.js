@@ -14,7 +14,7 @@ export const useGetAssignedProjects = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('/api/project/assignedProjects', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project/assignedProjects', {
             method: 'GET',
             headers: {'Content-Type': 'application/json'}
         })

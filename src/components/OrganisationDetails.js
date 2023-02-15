@@ -34,7 +34,7 @@ const OrganisationDetails = () => {
     // fires when the component is rendered
     useEffect(() => {
         const fetchOrganisation = async () => {
-            const response = await fetch('/api/organisation/' + id, { // fetch the project based on the project's id
+            const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/organisation/' + id, { // fetch the project based on the project's id
                 headers: {
                     'Authorization': `Bearer ${ user.token }` // sends authorisation header with the user's token -> backend will validate token -> if valid, grant access to API
                 }
@@ -285,7 +285,7 @@ const OrganisationDetails = () => {
 
     // delete organisation
     const handleClick = async () => {
-        const response = await fetch('/api/organisation/' + id, {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/organisation/' + id, {
             method: 'DELETE',
             headers: {
                 'Authorization': `Bearer ${ user.token }`

@@ -31,7 +31,7 @@ const AssignmentForm = () => {
         const assignment = { title, organisation_id, start_date, end_date, threshold, created_by }
 
         // fetch request to post new data
-        const response = await fetch('/api/assignment/', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/assignment/', {
             method: 'POST',
             body: JSON.stringify(assignment), // send the assignment object
             headers: {

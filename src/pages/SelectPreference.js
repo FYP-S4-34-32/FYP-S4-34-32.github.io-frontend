@@ -29,7 +29,7 @@ const SelectPreference = () => {
     // fires when component is rendered
     useEffect(() => {
         const fetchProjects = async () => {
-            const response = await fetch('/api/project', {
+            const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/project', {
                 headers: {
                     'Authorization': `Bearer ${ user.token }` // sends authorisation header with the uer's token -> backend will validate token -> if valid, grant access to API
                 }
@@ -81,7 +81,7 @@ const SelectPreference = () => {
         const projectPreference = { email, firstChoice, secondChoice, thirdChoice }
 
         // fetch request to post new data
-        const response = await fetch('/api/user/selectpreference', {
+        const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/user/selectpreference', {
             method: 'PATCH',
             body: JSON.stringify(projectPreference),
             headers: {
