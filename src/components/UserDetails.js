@@ -14,7 +14,7 @@ import { useUpdateRole } from '../hooks/useUpdateRole'
 
 const UserDetails = () => {
     const { user } = useAuthenticationContext(); // current user (admin or superadmin)
-    const {updateInfo, isLoading, error} = useUpdateInfo();  
+    const {updateInfo, isLoading, error, updateContact, resetError, resetUpdateContact} = useUpdateInfo();  
     const {updateRole, updateRoleIsLoading, updateRoleError, updateRoleSuccess} = useUpdateRole();
     const navigate = useNavigate();
     const location = useLocation(); 
@@ -137,20 +137,22 @@ const UserDetails = () => {
                         { profile && <p style={{display:'inline'}}> { profile.contact } </p> }
 
                         <button className="editContactBtn" type="button" onClick={() => {setEditContactForm(!editContactForm); setUserContact(profile.contact)}} disabled={ isLoading }>Edit</button>
+                        <br></br><br></br>
                         { editContactForm &&
                             <form onSubmit={handleSubmitContactInfo}>
-                                <input 
+                                <input style={{width: "780px"}}
                                     type="contact"
                                     name="contact"
                                     value={userContact} 
                                     onChange={(e) => setUserContact(e.target.value)}
                                 />
                                 
-                                <button className="submitBtn">Save</button> 
-                                <button className="cancelBtn">Cancel</button>
+                                <button className="submitBtn" style={{position:"absolute", right:"60px"}}>Save</button> 
+                                <button className="cancelBtn" style={{position:"absolute", right:"160px"}}>Cancel</button>
                             </form>      
                         }
-                        {error && <div className="error">{error}</div>}
+                        <br></br><br></br>
+                        {error && <div className="error" style={{width:"80%", marginLeft:"60px"}}>{error}</div>}
                     </div>
                      <div className='userDetails-orgDiv' style={{width:"40%"}}>
                         <h4>Organisation</h4>

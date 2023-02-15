@@ -7,6 +7,7 @@
   --error: #e7195a; 
   --success: green;
 }
+
 body {
   background: #f1f1f1;
   margin: 0;
@@ -119,7 +120,32 @@ header a {
   width: 58%;  
 }
 
-.cancelBtn, .editContactBtn, .editSkillsBtn, .editRoleBtn {
+.editContactBtn, .editSkillsBtn {
+  /* background: var(--primary); */
+  background: rgba(128, 128, 128, 0.268);
+  border: 0;
+  color: rgb(86, 86, 86);
+  padding: 10px; 
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer; 
+  float: right; /* Add this to move the buttons to the right */
+  margin-left: 10px; /* Add this to add some space between the buttons */
+}
+
+.editRoleBtn {
+  /* background: var(--primary); */
+  background: rgba(128, 128, 128, 0.268);
+  border: 0;
+  color: rgb(86, 86, 86);
+  padding: 10px; 
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer; 
+  margin-left: 10px; /* Add this to add some space between the buttons */
+}
+
+.cancelBtn {
   /* background: var(--primary); */
   background: rgba(128, 128, 128, 0.268);
   border: 0;
@@ -172,7 +198,7 @@ hr {
   margin-top: 30px;
   margin-left: 30px;
   margin-right: 30px; 
-  width: 740px;  
+  width: 754px;  
 }
 
 .editSkillsForm {
@@ -595,7 +621,7 @@ div.success {
   padding: 10px;
   background: #e9f5f5;
   border: 1px solid var(--success);
-  color: var(--success);
+  color: var(--success) !important;
   border-radius: 4px;
   margin: 20px 0;
 }

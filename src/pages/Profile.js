@@ -16,7 +16,7 @@ const Profile = () => {
     const { user } = useAuthenticationContext()    
     const { fetchProfile, fetchProfileIsLoading, fetchProfileError, profile } = useFetchProfile() // fetch user's profile info 
     const { getOrganisationSkills, allSkills } = useGetOrganisationSkills(); // fetch all skills defined for the organisation
-    const {updateInfo, isLoading, error, updateContactSuccess} = useUpdateInfo()  
+    const {updateInfo, isLoading, error, updateContact, resetError, resetUpdateContact} = useUpdateInfo()  
     const {changePassword, changePwIsLoading, changePwError, changePwSuccess} = useChangePassword()
     const {updateSkills, updateSkillsIsLoading, updateSkillsError} = useUpdateSkills()  
     var availSkillsArray = []; // available skills for user to select from
@@ -86,6 +86,8 @@ const Profile = () => {
     // TOGGLE contact form
     const showContactForm = () => {
         setShowContactForm(!contactForm);
+        resetError();
+        resetUpdateContact();
     };
 
     // validate availSkillsArray: should only have skills that are not already in userSkillsArr
@@ -151,6 +153,9 @@ const Profile = () => {
     // TO HANDLE SUBMITTING OF CONTACT INFO
     const handleSubmitContactInfo = async(e) => {
         e.preventDefault();
+
+        resetError();
+        resetUpdateContact();
 
         setSelectedInfo('showUser');
         showContactForm();
@@ -399,11 +404,13 @@ const Profile = () => {
                                 <input type="contact" className="newContact" placeholder={"New contact information"} onChange={(e) => {setContact(e.target.value)}}/>
                                 <button className="submitBtn" disabled={ isLoading }>Submit</button>
                                 <button className="cancelBtn" onClick={showContactForm}>Cancel</button>
+                                <br></br>
+                                <br></br>
                             </form>
                         )}
 
                         {error && <div className="error"> {error} </div>}
-                        {updateContactSuccess && <div className="success"> {updateContactSuccess} </div>}
+                        {updateContact && <div className="success"> {updateContact} </div>}
                     </div>
                 )
         }
