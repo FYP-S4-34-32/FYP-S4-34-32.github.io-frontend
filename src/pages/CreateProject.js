@@ -103,7 +103,6 @@ const CreateProject = () => {
 
             setEmptyFields([]) // reset the emptyfields array
             
-            console.log('New Project Added')
 
             navigate('/') // navigate back to home page aka project listing page
         }
