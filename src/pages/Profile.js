@@ -1,5 +1,5 @@
 //==============//
-// Profile page // --> to be updated again
+// Profile page //  
 //==============//
 
 // imports 
@@ -49,8 +49,6 @@ const Profile = () => {
         {value : "Advanced", label : "Advanced"}
     ]
 
-    console.log("org skills: ", allSkills);
-
     // DEFAULT AVAILABLE SKILLS -> based on organisation's skills defined. 
     // will change based on user's current skills (check validateSkillsArray function)
     const initialiseAvailSkillsArray = () => {
@@ -64,8 +62,7 @@ const Profile = () => {
         return temp;
     }
 
-    availSkillsArray = initialiseAvailSkillsArray();
-    // console.log("avail skills: ", availSkillsArray);
+    availSkillsArray = initialiseAvailSkillsArray(); 
 
     // DEFAULT available skills, will change based on user's current skills (check validateSkillsArray function)
     // var availSkillsArray = [ 
