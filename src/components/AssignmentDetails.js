@@ -551,7 +551,7 @@ const AssignmentDetails = () => {
                 return (
                     <div className="assignment-profile">
                         
-                        <h2> Current List of Assignments </h2>  
+                        <h2> Current List of Projects </h2>  
                         {showProjects()}
                     </div> 
                 )
