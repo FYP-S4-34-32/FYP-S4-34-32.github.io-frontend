@@ -207,9 +207,9 @@ const UserDetails = () => {
                                 />
 
                                 <button className="submitBtn">Save</button>
-                                {error && <div className="error">{error}</div>} 
                             </form>      
                         }
+                        {error && <div className="error">{error}</div>} 
                           
                     </div>
                     <div style={{width:"50%"}}>
