@@ -52,7 +52,7 @@ export const AuthenticationContextProvider = ({ children }) => {
         }
     }, []) // runs once
 
-    console.log('AuthenticationContext state: ', state) // logs any changes to the state
+    // console.log('AuthenticationContext state: ', state) // logs any changes to the state
 
     // wraps children component(s)
     return (

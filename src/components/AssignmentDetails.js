@@ -280,7 +280,7 @@ const AssignmentDetails = () => {
         setMessage("Process is running, please be patient.");
     
         const { automaticAssignmentError } = await automaticAssignment(user, id);
-        console.log("automaticAssignmentError", automaticAssignmentError)
+        // console.log("automaticAssignmentError", automaticAssignmentError)
 
         fetchAssignment()
     

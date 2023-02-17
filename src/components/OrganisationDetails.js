@@ -97,7 +97,7 @@ const OrganisationDetails = () => {
 
     // delete a user from the database
     const deleteUser = async (email) => { 
-        console.log("to be deleted user's email: ", email)
+        // console.log("to be deleted user's email: ", email)
         await deleteOneUser(email); 
         getAllUsers(); // get updated array of users
         filterUsers(); // get updated array of users
@@ -219,7 +219,7 @@ const OrganisationDetails = () => {
 
     // pass user details to user details component
     const passUserDetails = (userDetails) => {
-        console.log("user details: ", userDetails)
+        // console.log("user details: ", userDetails)
         const id = userDetails._id;
         const pathname = `/UserDetails/${id}`
         const state = userDetails

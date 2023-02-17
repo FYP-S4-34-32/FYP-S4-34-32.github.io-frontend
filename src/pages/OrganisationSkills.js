@@ -21,7 +21,7 @@ const OrganisationSkills = () => {
             getOrganisationSkills(organisation_id);
     }, []) 
 
-    console.log("allSkills", allSkills);
+    // console.log("allSkills", allSkills);
 
     // Check if skill has already been aded
     const validateSkill = (skillName) => { 
@@ -43,13 +43,13 @@ const OrganisationSkills = () => {
 
         // only add the skill if it doesn't already exist
         if (skillName !== "" && skillName !== " " && skillName.trim().length !== 0 && validateSkill(skillName) ) { 
-            console.log(skillName + " can be added");
+            // console.log(skillName + " can be added");
             skillsArr.push({skillName}); 
             await updateOrgSkill(organisation_id, skillsArr);
 
             // after adding the new skill, get all org skills again (updated)
             getOrganisationSkills(organisation_id); 
-            console.log("updated allSkills", allSkills);
+            // console.log("updated allSkills", allSkills);
         } 
         // clear the input field
         setSkillName("");

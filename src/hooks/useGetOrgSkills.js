@@ -11,7 +11,7 @@ export const useGetOrganisationSkills = () => {
     const getOrganisationSkills = async (organisation_id) => {
         setIsLoading(true);
         setError(null);
-        console.log("user organisation id: ", organisation_id);
+        // console.log("user organisation id: ", organisation_id);
 
         const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/organisation/getOrganisationSkills', {
             method: 'POST',
