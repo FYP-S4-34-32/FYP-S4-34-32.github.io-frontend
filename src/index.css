@@ -619,12 +619,13 @@ input.error, .create textarea.error {
 }
 
 div.success {
+  width: fit-content;
   padding: 10px;
   background: #e9f5f5;
   border: 1px solid var(--success);
   color: var(--success) !important;
   border-radius: 4px;
-  margin: 20px 0;
+  margin: 20px 30px;
 }
 
 /* navbar */
