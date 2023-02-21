@@ -607,23 +607,25 @@ form button, .updateDetailsBtn{
 }
 div.error {
   padding: 10px;
+  width: fit-content;
   background: #ffefef;
   border: 1px solid var(--error);
   color: var(--error);
   border-radius: 4px;
-  margin: 20px 0;
+  margin: 20px 30px;
 }
 input.error, .create textarea.error {
   border: 1px solid var(--error);
 }
 
 div.success {
+  width: fit-content;
   padding: 10px;
   background: #e9f5f5;
   border: 1px solid var(--success);
   color: var(--success) !important;
   border-radius: 4px;
-  margin: 20px 0;
+  margin: 20px 30px;
 }
 
 /* navbar */
