@@ -301,7 +301,7 @@ const OrganisationDetails = () => {
 
         // reponse NOT ok
         if (!response.ok) {
-            console.log(json.error) // the error property from organisationController.deleteOrganisation --> return res.status(404).json({ error: "No such organisation" })
+            // console.log(json.error) // the error property from organisationController.deleteOrganisation --> return res.status(404).json({ error: "No such organisation" })
         }
     }
 

@@ -313,7 +313,7 @@ const AssignmentDetails = () => {
       
     
     const showData = () => {
-        console.count('showData function call')
+        // console.count('showData function call')
         let first_choice, second_choice, third_choice, not_assigned, not_selected, total_count;
             try {
                 first_choice = JSON.parse(assignment.employee_got_first_choice);
@@ -323,7 +323,7 @@ const AssignmentDetails = () => {
                 not_selected = JSON.parse(assignment.employee_got_not_selected);
                 total_count = JSON.parse(assignment.employees.length);
                 } catch (error) {
-                console.error(error);
+                // console.error(error);
             return {
             error: "The automatic assignment has not been processed for this assignment, please run the process to view the overview statistics"
                 }

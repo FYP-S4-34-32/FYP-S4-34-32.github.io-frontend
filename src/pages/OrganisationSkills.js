@@ -28,7 +28,7 @@ const OrganisationSkills = () => {
 
         const skillToCheck = allSkills.find((skill) => skill.skillName === skillName); 
         if (skillToCheck !== undefined) {
-            console.log(skillName + " already exists");
+            // console.log(skillName + " already exists");
             return false;
         }
 
