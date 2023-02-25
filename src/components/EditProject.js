@@ -96,11 +96,11 @@ const EditProject = () => {
 
     // update the original skills array
     const updateOriginalSkillArray = (index, value) => {
-        console.log("before updating: ", originalSkills)
+        // console.log("before updating: ", originalSkills)
 
         originalSkills[index] = value
 
-        console.log("after updating: ", originalSkills)
+        // console.log("after updating: ", originalSkills)
     }
 
     // update the original competency array
@@ -213,7 +213,7 @@ const EditProject = () => {
 
             setEmptyFields([]) // reset the emptyfields array
             
-            console.log('Project Updated')
+            // console.log('Project Updated')
 
             navigate('/projects/' + id) // navigate back to home page aka project listing page
         }

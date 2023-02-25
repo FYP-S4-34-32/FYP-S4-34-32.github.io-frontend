@@ -150,9 +150,8 @@ const UserDetails = () => {
                                 <button className="submitBtn" style={{position:"absolute", right:"60px"}}>Save</button> 
                                 <button className="cancelBtn" style={{position:"absolute", right:"160px"}}>Cancel</button>
                             </form>      
-                        }
-                        <br></br><br></br>
-                        {error && <div className="error" style={{width:"80%", marginLeft:"60px"}}>{error}</div>}
+                        } 
+                        {error && <div className="error">{error}</div>}
                     </div>
                      <div className='userDetails-orgDiv' style={{width:"40%"}}>
                         <h4>Organisation</h4>
@@ -207,9 +206,9 @@ const UserDetails = () => {
                                 />
 
                                 <button className="submitBtn">Save</button>
-                                {error && <div className="error">{error}</div>} 
                             </form>      
                         }
+                        {error && <div className="error">{error}</div>} 
                           
                     </div>
                     <div style={{width:"50%"}}>

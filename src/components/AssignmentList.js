@@ -35,7 +35,7 @@ const AssignmentList = ({ assignment }) => {
 
         // response NOT ok
         if (!response.ok) {
-            console.log(json.error) // the error property
+            // console.log(json.error) // the error property
         }
     }
 

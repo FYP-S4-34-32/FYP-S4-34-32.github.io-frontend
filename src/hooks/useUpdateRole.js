@@ -22,7 +22,7 @@ export const useUpdateRole = () => {
         })
 
         const json = await response.json() 
-        console.log(json)
+        // console.log(json)
 
         if (!response.ok) {
             setIsLoading(false)

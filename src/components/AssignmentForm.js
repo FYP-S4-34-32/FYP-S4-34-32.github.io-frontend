@@ -60,7 +60,7 @@ const AssignmentForm = () => {
             setThreshold(0)
             setEmptyFields([]) // reset the emptyfields array
 
-            console.log("new assignment added", json)
+            // console.log("new assignment added", json)
 
             dispatch({ type: 'CREATE_ASSIGNMENT', payload: json })
         }

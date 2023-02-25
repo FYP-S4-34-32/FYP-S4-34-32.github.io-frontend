@@ -64,7 +64,7 @@ const CreateOrganisation = () => {
 
             setEmptyFields([]) // reset the emptyfields array
             
-            console.log('New Organisation Added')
+            // console.log('New Organisation Added')
 
             navigate('/') // navigate back to home page aka organistion listing page
         }

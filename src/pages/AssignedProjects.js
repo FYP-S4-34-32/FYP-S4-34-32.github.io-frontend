@@ -19,8 +19,7 @@ const AssignedProjects = () => {
         }
     }
 
-    getAssignedProjects() 
-    console.log("assignedProjectsArray: ", assignedProjectsArray) 
+    getAssignedProjects()  
 
     // display the assigned projects
     const showAssignedProjects = assignedProjectsArray.map((project) => {

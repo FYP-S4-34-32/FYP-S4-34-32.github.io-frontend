@@ -33,7 +33,7 @@ export const useUpdateProjects = () => {
             setIsLoading(false) 
         }
         
-        console.log(json.assignment)
+        // console.log(json.assignment)
         return json.assignment
     }
 

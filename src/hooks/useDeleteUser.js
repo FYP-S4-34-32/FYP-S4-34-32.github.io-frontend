@@ -12,7 +12,7 @@ export const useDeleteUser = () => {
 
     const deleteOneUser = async (email) => { 
 
-        console.log("to delete user's userEmail: ", JSON.stringify({email}))
+        // console.log("to delete user's userEmail: ", JSON.stringify({email}))
         setIsLoading(true)  
         setError(null) 
 

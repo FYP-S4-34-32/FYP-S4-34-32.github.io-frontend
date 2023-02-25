@@ -11,7 +11,7 @@ export const useUpdateOrgSkill = () => {
         setIsLoading(true);
         setError(null);
 
-        console.log("new skill to be added: ", organisation_skills);
+        // console.log("new skill to be added: ", organisation_skills);
 
         const response = await fetch('https://fyp-22-s4-32.herokuapp.com/api/Organisation/updateOrganisationSkils', {
             method: 'POST',
@@ -32,7 +32,7 @@ export const useUpdateOrgSkill = () => {
             setIsLoading(false);
         } 
 
-        console.log("response: ", json);
+        // console.log("response: ", json);
     }
 
     return { updateOrgSkill, updateOrgSkillsError, uodateOrgSkillsLoading};

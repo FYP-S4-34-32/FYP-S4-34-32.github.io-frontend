@@ -74,8 +74,7 @@ const AllUsers = () => {
     const deleteUser = async(email) => {  
         // CONFIRMATION BOX 
         let answer = window.confirm("Delete user " + email + "?");
-
-        //console.log("answer: ", answer)
+ 
         if (answer) { // if user clicks OK, answer === true
             await deleteOneUser(email);
             getAllUsers(); // get updated array of users
@@ -297,8 +296,7 @@ const AllUsers = () => {
     }
 
     // pass user details to user details component
-    const passUserDetails = (userDetails) => {
-        //console.log("user details: ", userDetails)
+    const passUserDetails = (userDetails) => { 
         const id = userDetails._id;
         const pathname = `/UserDetails/${id}`
         const state = userDetails
