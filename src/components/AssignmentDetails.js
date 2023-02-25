@@ -525,7 +525,7 @@ const AssignmentDetails = () => {
             error ? <p>{error}</p> : <Bar key={uniqueKey} data={showData()} /> :
             null
             }
-            
+            <p>Percentage of skills and competency fulfilled for this Assignment: {assignment.skills_and_competency_fulfilled}</p>
             </div>
         );
     }
