@@ -525,6 +525,7 @@ const AssignmentDetails = () => {
             error ? <p>{error}</p> : <Bar key={uniqueKey} data={showData()} /> :
             null
             }
+            <p>Test</p>
             </div>
         );
     }
