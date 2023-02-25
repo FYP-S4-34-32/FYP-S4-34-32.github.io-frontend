@@ -522,10 +522,9 @@ const AssignmentDetails = () => {
         return (
             <div className="showStatistics">
             {selectedInfo === 'showData' && assignment ?
-            error ? <p>{error}</p> : <Bar key={uniqueKey} data={showData()} /> :
+            error ? <p>{error}</p> : (<div><Bar key={uniqueKey} data={showData()} /><p>Percentage of skills and competency fulfilled for this Assignment: {assignment.skills_and_competency_fulfilled}%</p></div>) :
             null
             }
-            <p>Percentage of skills and competency fulfilled for this Assignment: {assignment.skills_and_competency_fulfilled}</p>
             </div>
         );
     }
